@@ -6,6 +6,8 @@
 </head>
 <body>
 
+
+
 <div class="container">
     <div class="py-5 text-center">
         <p class="lead">GRADUATION PROJECT</p>
@@ -15,6 +17,7 @@
             <div class="mb-3">
                 <div class="input-group">
                     <input type="text" id="from" class="form-control" placeholder="Choose a nickname"/>
+
                     <div class="btn-group">
                         <button type="button" id="connect" class="btn btn-sm btn-outline-secondary" onclick="connect()">Connect</button>
                         <button type="button" id="disconnect" class="btn btn-sm btn-outline-secondary" onclick="disconnect()" disabled>Disconnect</button>
@@ -44,15 +47,29 @@
     </div>
 </div>
 
+<!--
+<div id="write">
+    <p>The serial number is: </p>
+</div>
+<script>
+    function show() {
+        document.getElementById("write").innerHTML = serialNumber;
+    }
+</script>
+
+-->
 
 <script th:src="@{/webjars/sockjs-client/1.1.2/sockjs.js}" type="text/javascript"></script>
 <script th:src="@{/webjars/stomp-websocket/2.3.3-1/stomp.js}" type="text/javascript"></script>
+
+
 <script type="text/javascript">
     var stompClient = null;
     var selectedUser = null;
-    var userName = $("#from").val();
+    var userName =  $("#from").val();
 
-    function setConnected(connected) {
+
+function setConnected(connected) {
         $("#from").prop("disabled", connected);
         $("#connect").prop("disabled", connected);
         $("#disconnect").prop("disabled", !connected);
@@ -244,14 +261,18 @@
 </body>
 <style>
     body{
-        background-color: #121212;
+        background-color: #3b4148;
     }
     .input-group{
-        background-color: #03dac5;
+        background-color: #eeeeee;
         text-decoration-color: #121212;
     }
-    .btn-outline-secondary:disabled{
-        color: #121212;
+    .btn-outline-secondary:enabled{
+        color: #eeeeee;
+        background-color: #007bff;
+    }
+    .lead{
+        color: chartreuse;
     }
 </style>
 </html>
