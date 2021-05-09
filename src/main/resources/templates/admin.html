@@ -192,7 +192,7 @@
 
     function setSelectedUser(username) {
         if(selectedUser==username)
-            username="";
+            username=null;
         selectedUser = username;
         $("#selectedUser").html(selectedUser);
         if ($("#selectedUser").html() == "") {
@@ -244,4 +244,20 @@
     }
 </script>
 </body>
+<style>
+    body{
+        background-color: #3b4148;
+    }
+    .input-group{
+        background-color: #eeeeee;
+        text-decoration-color: #121212;
+    }
+    .btn-outline-secondary:enabled{
+        color: #eeeeee;
+        background-color: #007bff;
+    }
+    .lead{
+        color: chartreuse;
+    }
+</style>
 </html>

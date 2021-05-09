@@ -6,7 +6,9 @@
 </head>
 <body>
 
-
+<form th:action="@{/logout}" method="post">
+    <input type="submit" onclick="disconnect()" value="Sign Out"/>
+</form>
 
 <div class="container">
     <div class="py-5 text-center">
@@ -66,7 +68,7 @@
 <script type="text/javascript">
     var stompClient = null;
     var selectedUser = null;
-    var userName =  $("#from").val();
+    var userName = $("#from").val();
 
 
 function setConnected(connected) {

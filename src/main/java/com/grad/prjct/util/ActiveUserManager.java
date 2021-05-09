@@ -33,7 +33,7 @@ public class ActiveUserManager {
 
     /**
      * concurrentHashMap kullanarak sileriz
-     * @param silincek kullanıcı adı
+     * @param silinecek kullanıcı adı
      */
     public void remove(String username) {
         map.remove(username);
